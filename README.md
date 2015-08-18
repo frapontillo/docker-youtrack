@@ -5,6 +5,33 @@
 
 Docker image for JetBrains YouTrack
 
+## Docker Image
+
+### Pull and run
+
+You can use the Docker image as-is (it will use defaults and will need you to complete the wizard configuration):
+
+```shell
+docker run -P frapontillo/youtrack
+```
+
+### Customized image
+
+You can extend the default image and specify a few environment variables in your own Dockerfile, e.g.:
+
+```dockerfile
+FROM    frapontillo/youtrack:latest
+
+ENV     YOUTRACK_BASE_URL http://your-balancer-ip
+ENV     YOUTRACK_HOME_DIR /var/youtrack
+ENV     YOUTRACK_DATA_DIR /var/youtrack/data
+ENV     YOUTRACK_BACKUPS_DIR /var/youtrack/backups
+ENV     YOUTRACK_LICENSE_USER_NAME Your YouTrack User Name
+ENV     YOUTRACK_LICENSE_KEY youryoutracklicensekey
+```
+
+Build and run your image: your YouTrack instance will then be running on the port 8080 in the docker container.
+
 ## License
 
 [JetBrains Youtrack](https://www.jetbrains.com/youtrack) and [Oracle Java 8](https://www.java.com) are referenced in the Docker container, but are subject to their own licenses.
