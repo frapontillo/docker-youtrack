@@ -53,7 +53,7 @@ Build and run your image: your YouTrack instance will then be running on the por
 ```
 
 [docker-url]: https://hub.docker.com/r/frapontillo/youtrack
-[docker-image]: https://img.shields.io/docker/pulls/frapontillo/youtrack?style=flat
+[docker-image]: https://img.shields.io/docker/pulls/frapontillo/youtrack.svg?style=flat
 
 [license-image]: http://img.shields.io/badge/license-Apache_2.0-blue.svg?style=flat
 [license-url]: LICENSE
